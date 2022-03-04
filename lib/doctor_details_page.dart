@@ -1,9 +1,16 @@
-import 'dart:ui';
 
+// ignore_for_file: prefer_const_constructors
+
+import 'dart:ui';
+import 'package:vaidh/payment.dart';
+import 'package:vaidh/success.dart';
+
+import 'defaultButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class DoctorDetailPage extends StatefulWidget {
+  static const id = 'doctor_details_page';
   @override
   State<StatefulWidget> createState() => _DoctorDetailState();
 }
@@ -192,32 +199,43 @@ class _DoctorDetailState extends State<DoctorDetailPage> {
               ),
             ),
             Container(
-              alignment: Alignment.center,
-              width: MediaQuery.of(context).size.width,
-              height: 54,
-              margin: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Color(0xff107163),
-                borderRadius: BorderRadius.circular(5),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0x17000000),
-                    offset: Offset(0, 15),
-                    blurRadius: 15,
-                    spreadRadius: 0,
-                  ),
-                ],
-              ),
-              child: Text(
-                'Make An Appointment',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w500,
+                alignment: Alignment.center,
+                width: MediaQuery.of(context).size.width,
+                height: 54,
+                margin: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Color(0xff107163),
+                  borderRadius: BorderRadius.circular(5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0x17000000),
+                      offset: Offset(0, 15),
+                      blurRadius: 15,
+                      spreadRadius: 0,
+                    ),
+                  ],
                 ),
-              ),
-            ),
+                child: Text(
+                  'Make An Appointment',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+             ),
+            // ElevatedButton(
+            //   onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Payment()));}, child: Text(
+            //   'Make An Appointment',
+            //   style: TextStyle(
+            //     color: Colors.white,
+            //     fontSize: 20,
+            //     fontFamily: 'Roboto',
+            //     fontWeight: FontWeight.w500,
+            //   ),),
+            //   style: ElevatedButton.styleFrom(),
+            // )
           ],
         ),
       ),

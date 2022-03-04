@@ -1,8 +1,9 @@
-// import 'package:doctor_appointment_ui/doctor_details_page.dart';
+
 import 'package:flutter/material.dart';
 import 'doctor_details_page.dart';
 
 class HomePage extends StatefulWidget {
+  static const String id = 'home_page';
   @override
   State<StatefulWidget> createState() => HomePageState();
 }
@@ -21,60 +22,31 @@ class HomePageState extends State<HomePage> {
         elevation: 0.0,
         backgroundColor: Color(0xff053F5E),
         centerTitle: true,
-        leading: Icon(
+        leading:const Icon(
           Icons.menu,
-          color: Colors.white,
+          color:  Colors.white,
         ),
         actions: [
           GestureDetector(
             child: Container(
-              margin: EdgeInsets.only(right: 10),
-              child: Icon(
+              margin:  const EdgeInsets.only(right: 10),
+              child: const Icon(
                 Icons.notifications_rounded,
                 color: Colors.white,
               ),
             ),
           ),
-          GestureDetector(
-            child: Container(
-              margin: EdgeInsets.only(right: 5),
-              child: Image.asset("assets/profile_img.png"),
-            ),
-          )
         ],
       ),
       body: Container(
         decoration: BoxDecoration(
             color: Colors.grey[100],
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(30), topLeft: Radius.circular(30))),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Container(
-            //   margin: EdgeInsets.only(top: 20, left: 20),
-            //   child: Text(
-            //     "Hi, Olivia",
-            //     style: TextStyle(
-            //       color: Color(0xff363636),
-            //       fontSize: 25,
-            //       fontFamily: 'Roboto',
-            //     ),
-            //   ),
-            // ),
-            Container(
-              margin: EdgeInsets.only(top: 5, left: 20),
-              child: Text(
-                "Welcome Back",
-                style: TextStyle(
-                  color: Color(0xff363636),
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Roboto',
-                ),
-              ),
-            ),
             Container(
               margin: EdgeInsets.only(top: 25, left: 20, right: 20),
               width: size.width,
@@ -330,7 +302,7 @@ class HomePageState extends State<HomePage> {
                     margin: EdgeInsets.only(top: 10),
                     child: Text(
                       name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xff363636),
                         fontSize: 17,
                         fontFamily: 'Roboto',
